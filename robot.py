@@ -33,7 +33,7 @@ class Robot:
     def set_right(self, speed):
         mode, output_speed = self.convert_speed(speed)
         self.right_motor.setSpeed(output_speed)
-        self.left_motor.run(mode)
+        self.right_motor.run(mode)
 
     def stop_motors(self):
         self.left_motor.run(Raspi_MotorHAT.RELEASE)
