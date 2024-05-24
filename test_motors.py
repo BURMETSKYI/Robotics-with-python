@@ -16,6 +16,6 @@ atexit.register(turn_off_motors)
 lm.setSpeed(150)
 rm.setSpeed(150)
 
-lm.run(Raspi_MotorHAT.FORWARD)
-rm.run(Raspi_MotorHAT.FORWARD)
+lm.run(Raspi_MotorHAT.BACKWARD)
+rm.run(Raspi_MotorHAT.BACKWARD)
 time.sleep(1)
