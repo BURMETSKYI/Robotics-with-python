@@ -22,7 +22,7 @@ class ObstacleAvoidingBehavior:
             # Get the sensor readings in meters
             left_distance = self.robot.left_distance_sensor.distance
             right_distance = self.robot.right_distance_sensor.distance
-            print("Left: {l:.2f}, Right: {r:.2f}").format(l=left_distance, r=right_distance)
+            print("Left: {l:.2f}, Right: {r:.2f}".format(l=left_distance, r=right_distance))
 
             # Get speeds for motors from distances
             left_speed = self.get_motor_speed(left_distance)
