@@ -1,2 +1,2 @@
 import socket
-print("%s is alive!" % socket.gethostname())
+print("%s is alive!" % socket.gethostname()) 
