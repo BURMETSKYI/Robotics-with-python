@@ -15,8 +15,8 @@ class ObstacleAvoidingBehavior:
             return self.speed
 
     def run(self):
-        self.robot.set_pan(0)
-        self.robot.set_tilt(0)
+        # self.robot.set_pan(0)
+        # self.robot.set_tilt(0)
 
         while True:
             # Get the sensor readings in meters
