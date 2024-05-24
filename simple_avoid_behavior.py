@@ -18,19 +18,19 @@ class ObstacleAvoidingBehavior:
         self.robot.set_pan(0)
         self.robot.set_tilt(0)
 
-    while True:
-        # Get the sensor readings in meters
-        left_distance = self.robot.left_distance_sensor.distance
-        right_distance = self.robot.right_distance_sensor.distance
-        print("Left: {l:.2f}, Right: {r:.2f}").format(l=left_distance, r=right_distance)
+        while True:
+            # Get the sensor readings in meters
+            left_distance = self.robot.left_distance_sensor.distance
+            right_distance = self.robot.right_distance_sensor.distance
+            print("Left: {l:.2f}, Right: {r:.2f}").format(l=left_distance, r=right_distance)
 
-        # Get speeds for motors from distances
-        left_speed = self.get_motor_speed(left_distance)
-        self.robot.set_left(left_speed)
-        right_speed = self.get_motor_speed(right_distance)
-        self.robot.set_right(right_speed)
-        # Wait a little
-        sleep(0.05)
+            # Get speeds for motors from distances
+            left_speed = self.get_motor_speed(left_distance)
+            self.robot.set_left(left_speed)
+            right_speed = self.get_motor_speed(right_distance)
+            self.robot.set_right(right_speed)
+            # Wait a little
+            sleep(0.05)
 
 bot = Robot()
 behavior = ObstacleAvoidingBehavior(bot)
