@@ -22,9 +22,9 @@ class Robot:
     def convert_speed(self, speed):
         # Choose the running mode
         mode = Raspi_MotorHAT.RELEASE
-        if speed > 0:
+        if speed < 0:
             mode = Raspi_MotorHAT.FORWARD
-        elif speed < 0:
+        elif speed > 0:
             mode = Raspi_MotorHAT.BACKWARD
         # Scale the speed
         output_speed = (abs(speed) * 255) // 100
